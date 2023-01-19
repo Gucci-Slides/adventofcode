@@ -1,0 +1,34 @@
+
+understand the problem
+track how much calories a given elf is carrying
+what elf is carrying the most and how much
+
+break into smaller problems
+dictionary where key is elf number, value is sum of calories
+since we are given a list of only the calories grouped by whitespace before next group
+the iterator will be the key 
+
+create the dictionary
+add key and value into dictionary
+how do you go about adding a key and a value into a dictionary
+"Adding an item to the dictionary is done by using a new index key and assigning a value to it"
+
+example:
+{
+	1: 6000,
+	2: 4000
+}
+
+where the keys (1,2) are incrimented from zero to the length of the data
+the values are the sums (where the first elf was carrying 1000, 2000, and 3000 calories)
+
+breaking down summing the calories
+keep a rolling sum until the whitespace comes
+
+need to add first integer to second to third
+1000 + 2000 + 3000
+not 
+1000 + 1000 + 2000 + 2000 + 3000 + 3000
+
+problem im facing
+the next iteration is not saving the previous value
